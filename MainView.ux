@@ -1,15 +1,40 @@
 <App>
   <ClientPanel>
     <JavaScript>
-      var name = 'Heissen Lopez (@heilop)';
+      // Import FuseJS' Observable module.
+      var Observable = require("FuseJS/Observable");
+      // Variables will be use.
+      var title = Observable('Register a new Word');
+      var word = Observable('Initial');
+      var location = Observable('Amazonas, Peru');
+      var usefulRating = Observable(4);
+      var comments = Observable('No comments yet!');
 
+      // Expose the variables to Vview.
       module.exports = {
-        name: name
+        title: title,
+        word: word,
+        location: location,
+        usefulRating: usefulRating,
+        comments: comments
       }
-    </JavaScript>
 
-    <StackPanel>
-      <Text Value="{name}" />
-    </StackPanel>
+    </JavaScript>
+    <ScrollView>
+      <StackPanel>
+        <Text Value="{title}" />
+        <Text>Word:</Text>
+        <TextBox Value="{word}" />
+
+        <Text>Location:</Text>
+        <TextBox Value="{location}" />
+
+        <Text>Rating:</Text>
+        <TextBox Value="{usefulRating}" InputHint="Integer" />
+
+        <Text>Comments:</Text>
+        <TextBox Value="{comments}" TextWrapping="Wrap" />
+      </StackPanel>
+    </ScrollView>
   </ClientPanel>
 </App>
