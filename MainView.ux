@@ -1,0 +1,15 @@
+<App>
+  <ClientPanel>
+    <JavaScript>
+      var name = 'Heissen Lopez (@heilop)';
+
+      module.exports = {
+        name: name
+      }
+    </JavaScript>
+
+    <StackPanel>
+      <Text Value="{name}" />
+    </StackPanel>
+  </ClientPanel>
+</App>
