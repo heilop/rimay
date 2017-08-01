@@ -9,6 +9,12 @@
       var location = words.map(function(x) { return x.location; });
       var usefulRating = words.map(function(x) { return x.usefulRating; });
       var comments = words.map(function(x) { return x.comments; });
+      var word = words.map(function(x) { return x.word; });
+
+      function chooseWord(arg) {
+        words.value = arg.data;
+      }
+
 
       var wordList = [
       	{
@@ -63,6 +69,7 @@
         usefulRating: usefulRating,
         comments: comments,
 
+        chooseWord: chooseWord
       }
 
     </JavaScript>
