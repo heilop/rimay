@@ -1,4 +1,6 @@
 <Page ux:Class="EditWordPage">
+  <Router ux:Dependency="router" />
+
   <JavaScript File="EditWordPage.js" />
 
   <ScrollView>
@@ -15,6 +17,8 @@
 
       <Text>Comments:</Text>
       <TextBox Value="{comments}" TextWrapping="Wrap" />
+
+      <Button Text="Back" Clicked="{goBack}" />
     </StackPanel>
   </ScrollView>
 </Page>

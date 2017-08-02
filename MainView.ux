@@ -1,8 +1,10 @@
 <App>
+  <Router ux:Name="router" />
+
   <ClientPanel>
-    <PageControl>
-      <HomePage />
-      <EditWordPage />
-    </PageControl>
+    <Navigator DefaultPath="home">
+      <HomePage ux:Template="home" router="router" />
+      <EditWordPage ux:Template="editWord" router="router" />
+    </Navigator>
   </ClientPanel>
 </App>

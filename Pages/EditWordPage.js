@@ -2,12 +2,18 @@
 var Observable = require("FuseJS/Observable");
 
 // Variables will be use.
-var title = Observable('Register a new Word');
 var words = Observable();
+var title = Observable('Register a new Word');
+
 var location = words.map(function(x) { return x.location; });
 var usefulRating = words.map(function(x) { return x.usefulRating; });
 var comments = words.map(function(x) { return x.comments; });
 var word = words.map(function(x) { return x.word; });
+
+function goBack() {
+	// Return to Previus Page
+	router.goBack();
+}
 
 // Expose the variables to Vview.
 module.exports = {
@@ -16,5 +22,7 @@ module.exports = {
   word: word,
   location: location,
   usefulRating: usefulRating,
-  comments: comments
+  comments: comments,
+
+  goBack: goBack
 }

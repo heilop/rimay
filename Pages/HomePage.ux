@@ -1,11 +1,13 @@
 <Page ux:Class="HomePage">
+  <Router ux:Dependency="router" />
+
   <JavaScript File="HomePage.js" />
 
   <ScrollView>
     <StackPanel>
       <!-- <Text Value="{title}" /> -->
       <Each Items="{wordList}">
-        <Button Text="{word}" Clicked="{chooseWord}" />
+        <Button Text="{word}" Clicked="{gotToWord}" />
       </Each>
     </StackPanel>
   </ScrollView>

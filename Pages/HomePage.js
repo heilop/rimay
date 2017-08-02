@@ -1,7 +1,8 @@
 var wordList = require("words");
 
-function chooseWord(arg) {
-  //words.value = arg.data;
+function gotToWord(arg) {
+  var word = arg.data;
+  router.push('editWord');
 }
 
 // Expose the variables to Vview.
@@ -14,5 +15,5 @@ module.exports = {
   // usefulRating: usefulRating,
   // comments: comments,
 
-  chooseWord: chooseWord
+  gotToWord: gotToWord
 }
