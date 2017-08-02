@@ -1,0 +1,12 @@
+<Page ux:Class="HomePage">
+  <JavaScript File="HomePage.js" />
+
+  <ScrollView>
+    <StackPanel>
+      <!-- <Text Value="{title}" /> -->
+      <Each Items="{wordList}">
+        <Button Text="{word}" Clicked="{chooseWord}" />
+      </Each>
+    </StackPanel>
+  </ScrollView>
+</Page>

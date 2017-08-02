@@ -3,10 +3,7 @@
 
   <ScrollView>
     <StackPanel>
-      <Text Value="{title}" />
-      <Each Items="{wordList}">
-        <Button Text="{word}" Clicked="{chooseWord}" />
-      </Each>
+      <Text Value="{word}" />
       <Text>Word:</Text>
       <TextBox Value="{word}" />
 

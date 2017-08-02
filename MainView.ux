@@ -1,54 +1,8 @@
 <App>
   <ClientPanel>
-    <JavaScript>
-      // Import FuseJS' Observable module.
-      var Observable = require("FuseJS/Observable");
-      var wordList = require("words");
-      // Variables will be use.
-      var title = Observable('Register a new Word');
-      var words = Observable();
-      var location = words.map(function(x) { return x.location; });
-      var usefulRating = words.map(function(x) { return x.usefulRating; });
-      var comments = words.map(function(x) { return x.comments; });
-      var word = words.map(function(x) { return x.word; });
-
-      function chooseWord(arg) {
-        words.value = arg.data;
-      }
-
-
-      // Expose the variables to Vview.
-      module.exports = {
-        title: title,
-        wordList: wordList,
-
-        word: word,
-        location: location,
-        usefulRating: usefulRating,
-        comments: comments,
-
-        chooseWord: chooseWord
-      }
-
-    </JavaScript>
-    <ScrollView>
-      <StackPanel>
-        <Text Value="{title}" />
-        <Each Items="{wordList}">
-          <Button Text="{word}" Clicked="{chooseWord}" />
-        </Each>
-        <Text>Word:</Text>
-        <TextBox Value="{word}" />
-
-        <Text>Location:</Text>
-        <TextBox Value="{location}" />
-
-        <Text>Rating:</Text>
-        <TextBox Value="{usefulRating}" InputHint="Integer" />
-
-        <Text>Comments:</Text>
-        <TextBox Value="{comments}" TextWrapping="Wrap" />
-      </StackPanel>
-    </ScrollView>
+    <PageControl>
+      <HomePage />
+      <EditWordPage />
+    </PageControl>
   </ClientPanel>
 </App>
