@@ -2,7 +2,7 @@ var wordList = require("words");
 
 function gotToWord(arg) {
   var word = arg.data;
-  router.push('editWord');
+  router.push('editWord', word);
 }
 
 // Expose the variables to Vview.

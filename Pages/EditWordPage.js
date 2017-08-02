@@ -1,9 +1,9 @@
 // Import FuseJS' Observable module.
-var Observable = require("FuseJS/Observable");
+//var Observable = require("FuseJS/Observable");
+//var title = Observable('Register a new Word');
 
 // Variables will be use.
-var words = Observable();
-var title = Observable('Register a new Word');
+var words = this.Parameter;
 
 var location = words.map(function(x) { return x.location; });
 var usefulRating = words.map(function(x) { return x.usefulRating; });
@@ -17,7 +17,7 @@ function goBack() {
 
 // Expose the variables to Vview.
 module.exports = {
-  title: title,
+  //title: title,
 
   word: word,
   location: location,
