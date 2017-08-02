@@ -1,0 +1,23 @@
+<Page ux:Class="EditWordPage">
+  <JavaScript File="EditWordPage.js" />
+
+  <ScrollView>
+    <StackPanel>
+      <Text Value="{title}" />
+      <Each Items="{wordList}">
+        <Button Text="{word}" Clicked="{chooseWord}" />
+      </Each>
+      <Text>Word:</Text>
+      <TextBox Value="{word}" />
+
+      <Text>Location:</Text>
+      <TextBox Value="{location}" />
+
+      <Text>Rating:</Text>
+      <TextBox Value="{usefulRating}" InputHint="Integer" />
+
+      <Text>Comments:</Text>
+      <TextBox Value="{comments}" TextWrapping="Wrap" />
+    </StackPanel>
+  </ScrollView>
+</Page>
