@@ -6,6 +6,6 @@
   ],
   "Includes": [
     "*",
-    "words.js:Bundle"
+    "Modules/*.js:Bundle"
   ]
 }

@@ -41,4 +41,35 @@ var wordList = [
   }
 ];
 
-module.exports = wordList;
+// Returns a Promise that represents an array of hike objects
+function getWords() {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      resolve(wordList);
+    }, 500);
+	});
+}
+// Returns a Promise that will be fulfilled when the hike is updated in the backend
+function updateWord(id, word, location, usefulRating, comments) {
+  return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+      for (var i = 0; i < wordList.length; i++) {
+        var word = wordList[i];
+        if (word.id == id) {
+          word.name = word;
+          word.location = location;
+          word.usefulRating = usefulRating;
+          word.comments = comments;
+          break;
+        }
+      }
+
+      resolve();
+		}, 0);
+	});
+}
+
+module.exports = {
+  getWords: getWords,
+  updateWord: updateWord
+}
