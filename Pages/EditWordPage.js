@@ -1,7 +1,7 @@
 // Import FuseJS' Observable module.
 //var Observable = require("FuseJS/Observable");
 //var title = Observable('Register a new Word');
-
+var Context = require("Modules/Context");
 // Variables will be use.
 var words = this.Parameter;
 
@@ -15,6 +15,17 @@ function goBack() {
 	router.goBack();
 }
 
+function save() {
+	Context.updateWord(word.value.id, word.value, location.value, usefulRating.value, comments.value);
+	router.goBack();
+}
+
+function cancel() {
+	// Refresh word value to reset dependent Observables' values.
+	word.value = word.value;
+	router.goBack();
+}
+
 // Expose the variables to Vview.
 module.exports = {
   //title: title,
@@ -24,5 +35,8 @@ module.exports = {
   usefulRating: usefulRating,
   comments: comments,
 
-  goBack: goBack
+  goBack: goBack,
+
+	cancel: cancel,
+  save: save
 }

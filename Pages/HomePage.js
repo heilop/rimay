@@ -1,4 +1,5 @@
-var wordList = require("words");
+var Context = require("Modules/Context");
+
 
 function gotToWord(arg) {
   var word = arg.data;
@@ -8,7 +9,7 @@ function gotToWord(arg) {
 // Expose the variables to Vview.
 module.exports = {
   // title: title,
-  wordList: wordList,
+  wordList: Context.words,
   //
   // word: word,
   // location: location,
