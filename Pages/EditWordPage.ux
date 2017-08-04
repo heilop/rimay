@@ -1,4 +1,4 @@
-<Page ux:Class="EditWordPage">
+<rimay.Page ux:Class="EditWordPage">
   <Router ux:Dependency="router" />
 
   <JavaScript File="EditWordPage.js" />
@@ -37,4 +37,4 @@
     </ScrollView>
   </DockPanel>
 
-</Page>
+</rimay.Page>

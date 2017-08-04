@@ -1,4 +1,4 @@
-<Page ux:Class="HomePage">
+<rimay.Page ux:Class="HomePage">
   <Router ux:Dependency="router" />
 
   <JavaScript File="HomePage.js" />
@@ -24,4 +24,4 @@
       </StackPanel>
     </ScrollView>
   </DockPanel>
-</Page>
+</rimay.Page>
