@@ -2,24 +2,39 @@
   <Router ux:Dependency="router" />
 
   <JavaScript File="EditWordPage.js" />
+  <DockPanel>
+    <!-- Button Options. (From Components)-->
+    <Grid ColumnCount="2" Dock="Bottom">
+      <rimay.Button Text="Save" Clicked="{save}" />
+      <rimay.Button Text="Cancel" Clicked="{cancel}" />
+    </Grid>
 
-  <ScrollView>
-    <StackPanel>
-      <Text Value="{word}" />
-      <Text>Word:</Text>
-      <TextBox Value="{word}" />
+    <ScrollView>
+      <StackPanel Padding="10" ItemSpacing="10" >
 
-      <Text>Location:</Text>
-      <TextBox Value="{location}" />
+        <rimay.Text ux:Class="TitleText" Opacity=".6" Margin="0, 0, 0, 5" />
 
-      <Text>Rating:</Text>
-      <TextBox Value="{usefulRating}" InputHint="Integer" />
+        <StackPanel>
+          <TitleText>Word:</TitleText>
+          <rimay.TextBox Value="{word}" />
+        </StackPanel>
 
-      <Text>Comments:</Text>
-      <TextBox Value="{comments}" TextWrapping="Wrap" />
+        <StackPanel>
+          <TitleText>Location:</TitleText>
+          <rimay.TextBox Value="{location}" />
+        </StackPanel>
 
-      <Button Text="Save" Clicked="{save}" />
-      <Button Text="Cancel" Clicked="{cancel}" />
-    </StackPanel>
-  </ScrollView>
+        <StackPanel>
+          <TitleText>Rating:</TitleText>
+          <rimay.TextBox Value="{usefulRating}" InputHint="Integer" />
+        </StackPanel>
+
+        <StackPanel>
+          <TitleText>Comments:</TitleText>
+					<rimay.TextView Value="{comments}" TextWrapping="Wrap" />
+        </StackPanel>
+      </StackPanel>
+    </ScrollView>
+  </DockPanel>
+
 </Page>

@@ -4,7 +4,7 @@
   <JavaScript File="HomePage.js" />
 
   <DockPanel>
-  	<word.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Recent Words</word.Text>
+  	<rimay.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Recent Words</rimay.Text>
     <ScrollView>
       <StackPanel>
         <!-- <Text Value="{title}" /> -->
@@ -12,7 +12,7 @@
         <Each Items="{wordList}">
           <Separator />
           <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gotToWord}" >
-            <word.Text Value="{word}" Margin="20" />
+            <rimay.Text Value="{word}" Margin="20" />
 
             <WhilePressed>
               <!-- Add effect when press a Word. -->
