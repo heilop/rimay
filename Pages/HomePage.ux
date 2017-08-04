@@ -3,12 +3,25 @@
 
   <JavaScript File="HomePage.js" />
 
-  <ScrollView>
-    <StackPanel>
-      <!-- <Text Value="{title}" /> -->
-      <Each Items="{wordList}">
-        <Button Text="{word}" Clicked="{gotToWord}" />
-      </Each>
-    </StackPanel>
-  </ScrollView>
+  <DockPanel>
+  	<word.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Recent Words</word.Text>
+    <ScrollView>
+      <StackPanel>
+        <!-- <Text Value="{title}" /> -->
+        <Rectangle ux:Class="Separator" Height="1" Fill="#fff4" />
+        <Each Items="{wordList}">
+          <Separator />
+          <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gotToWord}" >
+            <word.Text Value="{word}" Margin="20" />
+
+            <WhilePressed>
+              <!-- Add effect when press a Word. -->
+              <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+            </WhilePressed>
+          </Panel>
+        </Each>
+        <Separator />
+      </StackPanel>
+    </ScrollView>
+  </DockPanel>
 </Page>
