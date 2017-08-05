@@ -5,8 +5,8 @@
   <DockPanel>
     <!-- Button Options. (From Components)-->
     <Grid ColumnCount="2" Dock="Bottom">
-      <rimay.Button Text="Save" Clicked="{save}" />
       <rimay.Button Text="Cancel" Clicked="{cancel}" />
+      <rimay.Button Text="Save" Clicked="{save}" />
     </Grid>
 
     <ScrollView>
